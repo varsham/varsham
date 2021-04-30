@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Sacramento&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
+    <title>ForFun | Home page</title>
+
+    <style>
+      body {
+          font-family: Orelega One;
+          scroll-behavior: smooth;
+      }
+
+      #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 30%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+
+        border: 1px solid #ddd; /* Add a grey border */
+      }
+
+  </style>
+
+</head>
+
+
+
+
+<body class="bg-gray-100">
+
+<h1 style="font-family: 'Cookie', cursive;" class="text-5xl flex justify-center mt-7">Varsha Makkapati<h1>
+  <div class="flex justify-center mt-10 bg-blue-100 p-3">
+    <nav class="w-1/4 lg:w-1/6">
+      <ul class="flex flex-col lg:flex-row text-center justify-center lg:justify-between">
+        <li class="pt-1 lg:pt-0 md:pr-5"><a href="index.html" class="hover:text-blue-200">Home</a></li>
+        <li class="pt-1 lg:pt-0 md:pr-5"><a href="writing.html" class="hover:text-blue-200">Writing</a></li>
+        <li class="pt-1 lg:pt-0"><a href="calligraphy.html" class="hover:text-blue-200">Calligraphy</a></li>
+      </ul>
+    <nav>
+</div>
+
+<div style="font-family: 'Orelega One', cursive;" class="flex justify-center text-4xl pt-10">Calligraphy<span class="text-blue-300">.</span></div>
+
+<div style="font-family: 'Orelega One', cursive;" class="text-xl flex justify-center pt-5">Welcome to my calligraphy page!</div>
+<div class="flex justify-center pt-3">
+  <div style="font-family: Raleway;" class="text-lg flex text-center justify-center w-1/2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia dolorum quod molestias porro eius voluptates itaque quae perspiciatis neque, dignissimos quia nobis architecto ullam quisquam, cum voluptate soluta! Veniam tempore odit nesciunt dolorum voluptas cum saepe velit ab assumenda exercitationem ipsa suscipit, incidunt sapiente accusamus facilis dolorem. Rem aut magni tempora, facilis delectus atque. Sint possimus quod debitis quis voluptatum alias eaque fugiat numquam ipsa? Ducimus veniam pariatur dicta velit eaque doloribus provident asperiores adipisci voluptates similique eum, maiores cumque at placeat voluptatibus, nulla dolor quis quisquam autem non sapiente? Quod sunt doloremque quibusdam, obcaecati delectus illum dolorum ad!</div>
+</div>
+
+<div class="flex justify-center">
+    <img src="welcomefinal.png" alt="welcome to calligraphy page" width="300" height="300">
+</div>
+
+<div class="flex justify-center p-5">
+    <input type="text" id="myInput" class="p-1 outline-none shadow-md" style="font-family: Raleway;" onkeyup="myFunction()" placeholder="Search for posts">
+  </div>
+  
+  <ul id="myUL">
+
+    <li class="flex justify-center"><a href="basicShadowLettering.html" class="pt-3 flex justify-center pt-0 text-lg cursor-pointer hover:text-blue-200 w-1/4 text-center lg:w-1/6">Basic Shadow Lettering Tutorial (Apr 30, 2021)</a></li>
+
+ </ul>
+
+
+ <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, ul, li, a, i, txtValue;
+      input = document.getElementById('myInput');
+      filter = input.value.toUpperCase();
+      ul = document.getElementById("myUL");
+      li = ul.getElementsByTagName('li');
+    
+      // Loop through all list items, and hide those who don't match the search query
+      for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          li[i].style.display = "";
+        } else {
+          li[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+  
+</body>
+</html>
