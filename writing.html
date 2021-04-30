@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orelega+One&family=Sacramento&display=swap" rel="stylesheet">
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <title>ForFun | Writing page</title>
+
+    <style>
+        body {
+            font-family: Orelega One;
+            /* scroll-behavior: smooth; */
+        }
+
+
+        #myInput {
+        background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+        background-position: 10px 12px; /* Position the search icon */
+        background-repeat: no-repeat; /* Do not repeat the icon image */
+        width: 30%; /* Full-width */
+        font-size: 16px; /* Increase font-size */
+
+        border: 1px solid #ddd; /* Add a grey border */
+      }
+
+
+    </style>
+</head>
+
+
+
+
+<body class="bg-gray-100">
+
+<h1 style="font-family: Sacramento, 'cursive'" class="text-7xl flex justify-center mt-7">Adept<h1>
+
+<div class="flex justify-center mt-10 bg-blue-100 p-3">
+    <nav class="w-1/4 lg:w-1/6">
+      <ul class="flex flex-col lg:flex-row text-center justify-center lg:justify-between">
+        <li class="pt-1 lg:pt-0 md:pr-5"><a href="writingsite.html" class="hover:text-blue-200">Home</a></li>
+        <li class="pt-1 lg:pt-0 md:pr-5"><a href="writing.html" class="hover:text-blue-200">Writing</a></li>
+        <li class="pt-1 lg:pt-0"><a href="#" class="hover:text-blue-200">Calligraphy</a></li>
+      </ul>
+    <nav>
+</div>
+
+<div class="flex justify-center text-4xl pt-10">Writing<span class="text-blue-300">.</span></div>
+
+<div class="text-xl flex justify-center pt-5">Here's where I post my writing!</div>
+<div class="flex justify-center pt-3">
+  <div class="text-lg flex text-center justify-center w-1/2" style="font-family: Raleway;">Here, I will be posting all of my writing, whether it is snippets of daily musings, continuations of old recycled ideas, or others. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, iure. Officia perferendis veritatis consectetur placeat voluptas! Accusantium ipsam qui error! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus distinctio voluptate rerum iusto, laudantium repellendus placeat corporis iure repellat eum quis omnis.</div>
+</div>
+
+<div class="flex justify-center text-2xl pt-5">Table of Contents<span class="text-blue-300">.</span></div>
+
+<div class="flex justify-center p-5">
+  <input type="text" id="myInput" class="p-1 outline-none" style="font-family: Raleway;" onkeyup="myFunction()" placeholder="Search for posts..">
+</div>
+
+<ul id="myUL">
+  <li class="flex justify-center"><a href="examplepost.html" class="flex justify-center pt-0 text-lg cursor-pointer hover:text-blue-200 w-1/4 lg:w-1/6">1 Example Post</a></li>
+</ul>
+
+<script>
+  function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+      a = li[i].getElementsByTagName("a")[0];
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+  }
+  </script>
+
+</body>
+
+</html>
